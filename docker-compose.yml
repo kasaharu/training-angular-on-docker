@@ -3,3 +3,7 @@ services:
   web:
     build: .
     container_name: "traning-docker"
+    volumes:
+      - www:/training-docker/dist
+volumes:
+  www:
