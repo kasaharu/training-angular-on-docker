@@ -5,5 +5,12 @@ services:
     container_name: "traning-docker"
     volumes:
       - www:/training-docker/dist
+  nginx-proxy:
+    image: nginx
+    container_name: "training-nginx"
+    ports:
+      - "8080:8080"
+    volumes:
+      - www:/www:ro
 volumes:
   www:
